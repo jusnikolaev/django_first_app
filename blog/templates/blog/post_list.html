@@ -5,13 +5,13 @@
     <title>Blog</title>
 </head>
 <body>
+
+{% for post in posts %}
 <div>
-    <h2><a href="http://127.0.0.1:8000/admin">First post</a></h2>
-    <p>Text text text text</p>
+    <h2><a href="http://127.0.0.1:8000/admin">{{ post.title }}</a></h2>
+    <p>published: {{ post.published_date }}</p>
+    <p>{{ post.text|linebreaksbr }}</p>
 </div>
-<div>
-    <h2><a href="http://127.0.0.1:8000/admin">Second post</a></h2>
-    <p>Text text text textsfnsdkfnsdfnsd</p>
-</div>
+{% endfor %}
 </body>
 </html>
